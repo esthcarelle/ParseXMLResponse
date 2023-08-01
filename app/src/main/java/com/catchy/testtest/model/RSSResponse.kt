@@ -6,26 +6,34 @@ import org.simpleframework.xml.Root
 
 @Root(name = "rss", strict = false)
 data class RssFeed(
-    @field:ElementList(name = "channel", inline = true)
-    var channel: Channel? = null
+    @field:Element(name = "channel")
+    var channel: Channel?
 )
-
-data class Author( @field:ElementList(name = "name", inline = true)
-                   val name: String)
-
-data class Contributor( @field:ElementList(name = "name", inline = true)
-                        val name: String)
-
+{
+    constructor() : this(null)
+}
+@Root(name = "channel", strict = false)
 data class Channel(
     @field:ElementList(name = "item", inline = true)
-    var items: List<RssItem>? = null
+    var items: List<NewsItem>?
 )
-
-data class RssItem(
+{
+    constructor() : this(null)
+}
+@Root(name = "item", strict = false)
+data class NewsItem(
     @field:Element(name = "title")
-    var title: String? = null,
+    var title: String,
+
     @field:Element(name = "link")
-    var link: String? = null,
+    var link: String,
+
     @field:Element(name = "description")
-    var description: String? = null
-)
+    var description: String,
+
+    @field:Element(name = "pubDate")
+    var pubDate: String
+){
+    constructor() : this("", "", "","")
+}
+

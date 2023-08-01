@@ -1,10 +1,11 @@
-package com.catchy.testtest
+package com.catchy.testtest.viewModel
 
 import android.content.ContentValues.TAG
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.catchy.testtest.model.RssFeed
 import com.catchy.testtest.network.ApiService.Companion.getInstance
 import kotlinx.coroutines.CoroutineScope
@@ -14,19 +15,22 @@ import java.lang.Exception
 
 class NewsViewModel : ViewModel() {
 
-    val fetchedList = mutableListOf<RssFeed>()
+    private var _fetchedList by mutableStateOf<RssFeed>(RssFeed())
+    val fetchedList: RssFeed
+        get() = _fetchedList
 
     init {
         fetchList()
     }
 
-    fun fetchList() {
+    private fun fetchList() {
         CoroutineScope(Dispatchers.IO).launch {
-            try{
+            try {
                 val apiService = getInstance()
-                apiService.getNews()
-            }catch (e: Exception){
-                Log.e(TAG, "fetchList: "+e.message )
+                _fetchedList = apiService.getNews()
+
+            } catch (e: Exception) {
+                Log.e(TAG, "fetchList: " + e.message)
             }
         }
     }
