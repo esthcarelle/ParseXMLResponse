@@ -8,7 +8,7 @@ import retrofit2.http.GET
 
 interface ApiService {
     @GET("rss-feeds/news-english.xml")
-     fun getNews(): RssFeed
+     fun getNews(): Call<RssFeed>
 
     companion object{
         private const val URL = "https://www.who.int/"
