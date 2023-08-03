@@ -1,17 +1,14 @@
 package com.catchy.testtest.navigation
 
-import android.content.ContentValues.TAG
 import android.net.Uri
-import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.catchy.testtest.NewItem
-import com.catchy.testtest.News
-import com.catchy.testtest.model.NewItem
+import com.catchy.testtest.ui.composable.News
+import com.catchy.testtest.ui.composable.NewsDetail
 import com.catchy.testtest.viewModel.NewsViewModel
 
 @Composable
@@ -20,12 +17,12 @@ fun NavGraph() {
     val sharedViewModel = NewsViewModel()
     NavHost(
         navController = navController,
-        startDestination = "list"
+        startDestination = "newsList"
     ) {
-        composable(route = "list") {
+        composable(route = "newsList") {
             /* Using composable function */
             News(onNavigate = {
-               navController.currentBackStackEntry?.arguments?.putString("url", "test")
+                navController.currentBackStackEntry?.arguments?.putString("url", "test")
                 navController.navigate(
                     "details?url=${
                         Uri.encode("test")
@@ -33,17 +30,15 @@ fun NavGraph() {
                 )
             }, sharedViewModel = sharedViewModel)
         }
-            composable(
-                route = "details?url={url}",
-                arguments = listOf(
-                    navArgument("url") {
-                        type = NavType.StringType
-                    }
-                )
-            ) {
-                /* Using composable function */
-
-                sharedViewModel.selectedNews?.let { it1 -> com.catchy.testtest.NewsDetail(newsItem = it1) }
+        composable(
+            route = "details?url={url}",
+            arguments = listOf(
+                navArgument("url") {
+                    type = NavType.StringType
+                }
+            )
+        ) {
+            sharedViewModel.selectedNews?.let { it1 -> NewsDetail(newsItem = it1) }
         }
     }
 }

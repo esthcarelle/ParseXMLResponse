@@ -32,7 +32,6 @@ class NewsViewModel : ViewModel() {
                 val apiService = getInstance()
                 apiService.getNews().execute().body()?.let {
                     _fetchedList = it
-                    Log.e(TAG, "fetchList: $_fetchedList")
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "fetchList: " + e.message)

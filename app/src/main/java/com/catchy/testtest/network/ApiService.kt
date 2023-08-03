@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.catchy.testtest.network
 
 import com.catchy.testtest.model.RssFeed
@@ -10,9 +12,10 @@ interface ApiService {
     @GET("rss-feeds/news-english.xml")
      fun getNews(): Call<RssFeed>
 
+    @Suppress("DEPRECATION")
     companion object{
         private const val URL = "https://www.who.int/"
-        lateinit var INSTANCE : ApiService
+        private lateinit var INSTANCE : ApiService
 
         fun getInstance(): ApiService{
                INSTANCE = Retrofit.Builder()
