@@ -1,6 +1,6 @@
 package com.catchy.testtest.ui.composable
 
-import android.os.Build
+
 import android.text.Html
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -17,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.text.HtmlCompat
 import com.catchy.testtest.model.NewItem
 import com.catchy.testtest.viewModel.NewsViewModel
 
