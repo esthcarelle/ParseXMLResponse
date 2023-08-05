@@ -1,6 +1,5 @@
 package com.catchy.testtest.ui.composable
 
-
 import android.text.Html
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column

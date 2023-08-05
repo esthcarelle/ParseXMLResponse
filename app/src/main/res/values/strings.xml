@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Test test</string>
+    <string name="publication">Publication date:</string>
 </resources>

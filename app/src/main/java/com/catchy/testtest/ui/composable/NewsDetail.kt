@@ -15,10 +15,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.catchy.testtest.R
 import com.catchy.testtest.model.NewItem
-
 
 @Composable
 fun NewsDetail(newsItem: NewItem) {
@@ -47,7 +48,7 @@ fun NewsDetail(newsItem: NewItem) {
             Spacer(modifier = Modifier.height(8.dp))
             newsItem.pubDate?.let {
                 Text(
-                    text = "Publication date: $it",
+                    text = LocalContext.current.getString(R.string.publication) + it,
                     fontSize = 16.sp,
                     color = Color.Black
                 )

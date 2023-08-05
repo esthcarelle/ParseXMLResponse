@@ -41,8 +41,7 @@ data class NewItem(
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
-    ) {
-    }
+    )
 
     constructor() : this("", "", "","")
 

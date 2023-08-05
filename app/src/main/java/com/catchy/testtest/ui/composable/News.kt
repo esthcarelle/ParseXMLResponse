@@ -23,6 +23,5 @@ fun News(onNavigate: (NewItem) -> Unit = {}, sharedViewModel: NewsViewModel) {
                 )
             }
         }
-
     }
 }
