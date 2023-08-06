@@ -1,4 +1,4 @@
-package com.catchy.testtest.navigation
+package com.catchy.xmlParser.navigation
 
 import android.net.Uri
 import androidx.compose.runtime.Composable
@@ -7,9 +7,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.catchy.testtest.ui.composable.News
-import com.catchy.testtest.ui.composable.NewsDetail
-import com.catchy.testtest.viewModel.NewsViewModel
+import com.catchy.xmlParser.ui.composable.News
+import com.catchy.xmlParser.ui.composable.NewsDetail
+import com.catchy.xmlParser.viewModel.NewsViewModel
 
 @Composable
 fun NavGraph() {

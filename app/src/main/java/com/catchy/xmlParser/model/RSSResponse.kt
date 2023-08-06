@@ -1,4 +1,4 @@
-package com.catchy.testtest.model
+package com.catchy.xmlParser.model
 
 import android.os.Parcel
 import android.os.Parcelable

@@ -1,8 +1,8 @@
 @file:Suppress("DEPRECATION")
 
-package com.catchy.testtest.network
+package com.catchy.xmlParser.network
 
-import com.catchy.testtest.model.RssFeed
+import com.catchy.xmlParser.model.RssFeed
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory

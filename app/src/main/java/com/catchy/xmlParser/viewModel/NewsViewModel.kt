@@ -1,4 +1,4 @@
-package com.catchy.testtest.viewModel
+package com.catchy.xmlParser.viewModel
 
 import android.content.ContentValues.TAG
 import android.util.Log
@@ -6,9 +6,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.catchy.testtest.model.NewItem
-import com.catchy.testtest.model.RssFeed
-import com.catchy.testtest.network.ApiService.Companion.getInstance
+import com.catchy.xmlParser.model.NewItem
+import com.catchy.xmlParser.model.RssFeed
+import com.catchy.xmlParser.network.ApiService.Companion.getInstance
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

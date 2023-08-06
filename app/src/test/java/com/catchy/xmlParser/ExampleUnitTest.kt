@@ -1,4 +1,4 @@
-package com.catchy.testtest
+package com.catchy.xmlParser
 
 import org.junit.Test
 

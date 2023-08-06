@@ -1,4 +1,4 @@
-package com.catchy.testtest.ui.theme
+package com.catchy.xmlParser.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -1,4 +1,4 @@
-package com.catchy.testtest
+package com.catchy.xmlParser
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,8 +9,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.catchy.testtest.ui.theme.TestTestTheme
-import com.catchy.testtest.navigation.NavGraph
+import com.catchy.xmlParser.ui.theme.TestTestTheme
+import com.catchy.xmlParser.navigation.NavGraph
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,10 +28,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-
-
-
 
 @Preview(showBackground = true)
 @Composable
