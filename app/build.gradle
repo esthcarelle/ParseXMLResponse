@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.catchy.testtest'
+    namespace 'com.catchy.xmlParser'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.catchy.testtest"
+        applicationId "com.catchy.xmlParser"
         minSdk 24
         targetSdk 33
         versionCode 1

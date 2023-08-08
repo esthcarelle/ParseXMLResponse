@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.catchy.testtest", appContext.packageName)
+        assertEquals("com.catchy.xmlParser", appContext.packageName)
     }
 }

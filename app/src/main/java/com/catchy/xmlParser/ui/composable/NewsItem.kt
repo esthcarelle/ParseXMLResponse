@@ -50,7 +50,8 @@ fun NewItem(newsItem: NewItem, onNavigate: (NewItem) -> Unit = {}, sharedViewMod
                 text = description.toString(),
                 style = MaterialTheme.typography.bodyMedium,
                 fontSize = 14.sp,
-                color = Color.Gray
+                color = Color.Gray,
+                maxLines = 3
             )
         }
     }
